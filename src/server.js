@@ -1,7 +1,19 @@
 var express = require('express');
 var body_parser = require('body-parser');
 
+// Beginning of Adding hello world feature 
 var app = express();
+
+var port = 3000;
+
+app.get('/', function(req,res){
+	res.json({hello:true})
+});
+
+// Ending of Adding hello world feature 
+app.listen(3000, function() {
+	console.log("Our Server is Running on port 3000.");
+})
 
 // Dot Env File Loader
 if (!process.env.PORT) dotenv = require('dotenv').load();
