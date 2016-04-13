@@ -15,21 +15,21 @@ app.listen(3000, function() {
 	console.log("Our Server is Running on port 3000.");
 })
 
-// Dot Env File Loader
-if (!process.env.PORT) dotenv = require('dotenv').load();
+// // Dot Env File Loader
+// if (!process.env.PORT) dotenv = require('dotenv').load();
 
-// Config
-var port = process.env.PORT || 3000;
+// // Config
+// var port = process.env.PORT || 3000;
 
-// Enable body-parser
-app.use(body_parser.json());
+// // Enable body-parser
+// app.use(body_parser.json());
 
-// Routes
-app.use('/', require('./routes')(express));
+// // Routes
+// app.use('/', require('./routes')(express));
 
-// Start up the Server
-var server = app.listen(port, function() {
-  if (process.env.DEBUG) console.log('Server Active On', port);
-});
+// // Start up the Server
+// var server = app.listen(port, function() {
+//   if (process.env.DEBUG) console.log('Server Active On', port);
+// });
 
-module.exports = server;
+// module.exports = server;
